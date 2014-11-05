@@ -1,0 +1,72 @@
+/**
+ * do not edit css file
+ * use LESS!
+ */
+a:hover {
+  color: #f06a5e;
+}
+.sidebar-menu > li.active a {
+  background: #35404d;
+  color: #fff;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.sidebar-menu > li.active i {
+  color: #FF6C60;
+}
+.panel .panel-body + .panel-body {
+  padding-top: 0;
+}
+.panel .panel-body .form-group:last-child {
+  margin-bottom: 0;
+}
+.grid-view .table th,
+.grid-view .table td {
+  padding-left: 15px;
+  padding-right: 15px;
+  vertical-align: middle;
+}
+.grid-view .table a[data-sort] {
+  display: block;
+  background: url(../images/dashboard/sort_both.png) no-repeat center right;
+  margin-right: -6px;
+  padding-right: 20px;
+}
+.grid-view .table a[data-sort].asc {
+  background-image: url(../images/dashboard/sort_asc.png);
+}
+.grid-view .table a[data-sort].desc {
+  background-image: url(../images/dashboard/sort_desc.png);
+}
+.grid-view .table a[data-sort] .caret {
+  display: none;
+}
+.grid-view .table-condensed th,
+.grid-view .table-condensed td {
+  padding: 5px;
+}
+.grid-view .summary {
+  line-height: 30px;
+}
+.grid-view .pagination {
+  margin: 0;
+}
+.form-control {
+  color: #535353;
+}
+.no-bottom {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.error-summary {
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  border-radius: 4px;
+  color: #a94442;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+.error-summary > :last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,103 @@
+
+/**
+ * do not edit css file
+ * use LESS!
+ */
+
+
+a:hover {
+  color: #f06a5e;
+}
+
+.sidebar-menu {
+  > li.active {
+    a {
+      background: #35404d;
+      color: #fff;
+      display: block;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    i {
+      color: #FF6C60;
+    }
+  }
+}
+
+.panel {
+  .panel-body + .panel-body {
+    padding-top: 0;
+  }
+
+  .panel-body .form-group:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.grid-view {
+  .table {
+    th,
+    td {
+      padding-left: 15px;
+      padding-right: 15px;
+      vertical-align: middle;
+    }
+
+    a[data-sort] {
+      display: block;
+      background: url(../images/dashboard/sort_both.png) no-repeat center right;
+      margin-right: -6px;
+      padding-right: 20px;
+
+      &.asc {
+        background-image: url(../images/dashboard/sort_asc.png);
+      }
+
+      &.desc {
+        background-image: url(../images/dashboard/sort_desc.png);
+      }
+
+      .caret {
+        display: none;
+      }
+    }
+  }
+
+  .table-condensed {
+    th,
+    td {
+      padding: 5px;
+    }
+  }
+
+  .summary {
+    line-height: 30px;
+  }
+
+  .pagination {
+    margin: 0;
+  }
+}
+
+.form-control {
+  color: #535353;
+}
+
+.no-bottom {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.error-summary {
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  border-radius: 4px;
+  color: #a94442;
+  margin-bottom: 20px;
+  padding: 15px;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}

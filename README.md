@@ -1,4 +1,4 @@
-FlAdmin Extension for Yii 2
+FlAdmin Extension for Yii2
 ===========================
 
 Installation

@@ -22,13 +22,14 @@ class DashboardAsset extends AssetBundle
         'css/bootstrap-reset.css',
         'css/style.css',
         'css/style-responsive.css',
+        'css/dashboard.css',
     ];
 
     /**
      * @inheritdoc
      */
     public $js = [
-
+        'js/dashboard.js',
     ];
 
     /**

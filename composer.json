@@ -15,7 +15,7 @@
 
     "autoload": {
         "psr-4": {
-            "otsec\\yii2\\fladmin": "/"
+            "otsec\\yii2\\fladmin\\": "/"
         }
     }
 }

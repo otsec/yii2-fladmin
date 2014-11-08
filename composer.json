@@ -1,5 +1,5 @@
 {
-	"name": "otsec/yii2-fladmin",
+    "name": "otsec/yii2-fladmin",
     "keywords": ["yii2", "bootstrap", "admin"],
     "type": "yii2-extension",
     "minimum-stability": "dev",
@@ -13,11 +13,11 @@
             "email": "razor2909@gmail.com"
         }
     ],
-	"require": {
+    "require": {
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
         "rmrevin/yii2-fontawesome": "2.5.0"
-	},
+    },
     "require-dev": {
         "yiisoft/yii2-gii": "*"
     },

@@ -22,6 +22,12 @@
     "require-dev": {
         "yiisoft/yii2-gii": "*"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/otsec/yii2-bootstrap-forms.git"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "otsec\\yii2\\fladmin\\": "/"

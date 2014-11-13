@@ -4,8 +4,8 @@ use yii\helpers\Inflector;
 use yii\helpers\StringHelper;
 
 /**
- * @var yii\gii\generators\crud\Generator $generator
- * @var yii\web\View $this
+ * @var $generator yii\gii\generators\crud\Generator
+ * @var $this      yii\web\View
  */
 
 $urlParams = $generator->generateUrlParams();
@@ -18,9 +18,9 @@ echo "<?php\n";
 use <?= $generator->indexWidgetType === 'grid' ? "yii\\grid\\GridView" : "yii\\widgets\\ListView" ?>;
 
 /**
-<?= !empty($generator->searchModelClass) ? " * @var " . ltrim($generator->searchModelClass, '\\') . ' $'. Inflector::variablize(StringHelper::basename($generator->searchModelClass)) ."\n" : '' ?>
- * @var yii\data\ActiveDataProvider $dataProvider
- * @var yii\web\View $this
+<?= !empty($generator->searchModelClass) ? " * @var $". Inflector::variablize(StringHelper::basename($generator->searchModelClass)) . ' ' . ltrim($generator->searchModelClass, '\\') ."\n" : '' ?>
+ * @var $dataProvider yii\data\ActiveDataProvider
+ * @var $this         yii\web\View
  */
 
 $this->title = <?= $generator->generateString(Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>;

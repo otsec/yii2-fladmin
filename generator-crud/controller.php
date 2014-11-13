@@ -52,8 +52,7 @@ use yii\web\NotFoundHttpException;
 use Yii;
 
 /**
- * Class <?= $controllerClass ?> 
- * @package <?= $controllerNamespace ?> 
+ * Class <?= $controllerClass ?>
  */
 class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->baseControllerClass) . "\n" ?>
 {
@@ -84,7 +83,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
 
     /**
      * Creates a new <?= $modelClass ?> model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * If creation is successful, the browser will be redirected to the 'index' page.
      * @return mixed
      */
     public function actionCreate()
@@ -102,7 +101,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
 
     /**
      * Updates an existing <?= $modelClass ?> model.
-     * If update is successful, the browser will be redirected to the 'view' page.
+     * If update is successful, the browser will be redirected to the 'index' page.
      * <?= implode("\n     * ", $actionParamComments) . "\n" ?>
      * @return mixed
      */
@@ -111,8 +110,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
         <?= $modelVariable ?> = $this->find<?= $modelClass ?>(<?= $actionParams ?>);
 
         if (<?= $modelVariable ?>->load(Yii::$app->request->post()) && <?= $modelVariable ?>->save()) {
-            Yii::$app->session->setFlash('<?= Inflector::camel2id($modelVariableName) ?>-update-success', true);
-            return $this->redirect(['update', <?= $urlParams ?>]);
+            return $this->redirect(['index']);
         }
 
         return $this->render('update', [

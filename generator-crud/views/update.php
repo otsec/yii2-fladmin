@@ -4,8 +4,8 @@ use yii\helpers\Inflector;
 use yii\helpers\StringHelper;
 
 /**
- * @var yii\gii\generators\crud\Generator $generator
- * @var yii\web\View $this
+ * @var $generator yii\gii\generators\crud\Generator
+ * @var $this      yii\web\View
  */
 
 $modelClass = StringHelper::basename($generator->modelClass);
@@ -16,8 +16,8 @@ echo "<?php\n";
 ?>
 
 /**
- * @var <?= ltrim($generator->modelClass, '\\') ?> <?= $modelVariable ?> <?= "\n" ?>
- * @var yii\web\View $this
+ * @var <?= $modelVariable ?> <?= ltrim($generator->modelClass, '\\') ?> <?= "\n" ?>
+ * @var $this yii\web\View
  */
 
 $this->title = <?= $generator->generateString('Редактирование {modelClass}: ', ['modelClass' => Inflector::camel2words(StringHelper::basename($generator->modelClass))]) ?> . ' ' . <?= $modelVariable ?>-><?= $generator->getNameAttribute() ?>;

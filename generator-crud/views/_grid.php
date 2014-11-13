@@ -1,18 +1,17 @@
 <?php
 
 /**
- * @var yii\gii\generators\crud\Generator $generator
- * @var yii\web\View $this
+ * @var $generator yii\gii\generators\crud\Generator
+ * @var $this      yii\web\View
  */
 
 echo "<?php\n";
 ?>
 
-use otsec\flatlab\helpers\FA;
 use yii\helpers\Html;
 
 /**
- * @var yii\web\View $this
+ * @var $this yii\web\View
  */
 ?>
 
@@ -22,7 +21,7 @@ use yii\helpers\Html;
             {summary}
         </div>
         <div class="pull-right">
-            <?= "<?= " ?>Html::a(FA::iconText('plus', 'добавить новый'), ['create'], ['class' => 'btn btn-success btn-sm']) ?>
+            <?= "<?= " ?>Html::a('<i class="fa fa-plus"></i> добавить новый', ['create'], ['class' => 'btn btn-success btn-sm']) ?>
         </div>
     </div>
 

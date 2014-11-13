@@ -6,8 +6,8 @@
 use yii\helpers\StringHelper;
 
 /**
- * @var yii\gii\generators\crud\Generator $generator
- * @var yii\web\View $this
+ * @var $generator yii\gii\generators\crud\Generator
+ * @var $this      yii\web\View
  */
 
 $namespace = StringHelper::dirname(ltrim($generator->searchModelClass, '\\'));
@@ -33,7 +33,6 @@ use Yii;
 
 /**
  * Class <?= $searchModelClass ?> 
- * @package <?= $namespace ?> 
  */
 class <?= $searchModelClass ?> extends <?= isset($modelAlias) ? $modelAlias : $modelClass ?>
 

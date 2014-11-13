@@ -4,8 +4,8 @@ use yii\helpers\Inflector;
 use yii\helpers\StringHelper;
 
 /**
- * @var yii\gii\generators\crud\Generator $generator
- * @var yii\web\View $this
+ * @var $generator yii\gii\generators\crud\Generator
+ * @var $this      yii\web\View
  */
 
 $modelClass = StringHelper::basename($generator->modelClass);
@@ -22,59 +22,35 @@ if (empty($safeAttributes)) {
 echo "<?php\n";
 ?>
 
-use yii\bootstrap\ActiveForm;
-use yii\bootstrap\Alert;
+use otsec\yii2\bootstrap\ActiveForm;
+use otsec\yii2\fladmin\FlAdmin;
 use yii\helpers\Html;
 
 /**
- * @var <?= ltrim($generator->modelClass, '\\') ?> <?= $modelVariable ?> <?= "\n" ?>
- * @var yii\web\View $this
+ * @var <?= $modelVariable ?> <?= ltrim($generator->modelClass, '\\') ?> <?= "\n" ?>
+ * @var $this yii\web\View
  */
 ?>
 
-<?= '<?php ' ?>if (Yii::$app->session->getFlash('<?= Inflector::camel2id($modelVariableName) ?>-update-success')): ?>
-    <?= '<?= ' ?>Alert::widget([
-        'options' => ['class' => 'alert-success'],
-        'body' => 'Изменения успешно сохранены',
-    ])?>
-<?= '<?php ' ?>endif ?>
-
 <div class="<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>-form">
-    <?= "<?php " ?>$form = ActiveForm::begin([
-        'layout' => 'horizontal',
-        'fieldConfig' => [
-            'horizontalCssClasses' => [
-                'label' => 'col-sm-2',
-                'offset' => 'col-sm-offset-2',
-                'wrapper' => 'col-sm-10',
-                'hint' => 'col-sm-10 col-sm-offset-2',
-            ],
-        ],
-    ]); ?>
+    <?= "<?php " ?>$form = ActiveForm::begin() ?>
 
-    <div class="panel">
-        <div class="panel-heading">Основные параметры</div>
-        <div class="panel-body no-bottom">
+    <?= "<?= " ?>FlAdmin::beginPanel('Основные параметры') ?>
 <?php foreach ($generator->getColumnNames() as $attribute) {
     if (in_array($attribute, $safeAttributes)) {
         $field = $generator->generateActiveField($attribute);
         $field = str_replace('$model', $modelVariable, $field);
-        echo "            <?= " . $field . " ?>\n";
+        echo "                <?= " . $field . " ?>\n";
     }
 } ?>
-        </div>
-    </div>
+    <?= "<?= " ?>FlAdmin::endPanel() ?>
 
-    <div class="panel">
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-sm-10 col-sm-offset-2">
-                    <?= "<?= " ?>Html::submitButton(<?= $modelVariable ?>->isNewRecord ? <?= $generator->generateString('Создать') ?> : <?= $generator->generateString('Сохранить') ?>, ['class' => <?= $modelVariable ?>->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-                    <?= "<?= " ?>Html::a(<?= $generator->generateString('Вернуться назад') ?>, ['index'], ['class' => 'btn btn-default']) ?>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?= "<?= " ?>FlAdmin::beginPanel() ?>
+        <?= "<?= " ?>$form->beginWrapper() ?>
+            <?= "<?= " ?>Html::submitButton(<?= $modelVariable ?>->isNewRecord ? <?= $generator->generateString('Создать') ?> : <?= $generator->generateString('Сохранить') ?>, ['class' => <?= $modelVariable ?>->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+            <?= "<?= " ?>Html::a(<?= $generator->generateString('Вернуться назад') ?>, ['index'], ['class' => 'btn btn-default']) ?>
+        <?= "<?= " ?>$form->endWrapper() ?>
+    <?= "<?= " ?>FlAdmin::endPanel() ?>
 
     <?= "<?php " ?>ActiveForm::end(); ?>
 </div>

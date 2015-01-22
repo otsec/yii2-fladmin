@@ -8,8 +8,8 @@ use yii\helpers\Inflector;
 use yii\helpers\StringHelper;
 
 /**
- * @var yii\gii\generators\crud\Generator $generator
- * @var yii\web\View $this
+ * @var $generator yii\gii\generators\crud\Generator
+ * @var $this      yii\web\View
  */
 
 $controllerNamespace = StringHelper::dirname(ltrim($generator->controllerClass, '\\'));

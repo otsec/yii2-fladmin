@@ -11,10 +11,11 @@ a:hover {
 .sidebar-menu > li.active i {
   color: #FF6C60;
 }
-.panel .panel-body + .panel-body {
+.panel-body + .panel-body {
   padding-top: 0;
 }
-.panel .panel-body > .form-group:last-child {
+.panel-body > .form-group:last-child,
+.panel-body > .table:last-child {
   margin-bottom: 0;
 }
 .grid-view .table th,
@@ -65,6 +66,9 @@ a:hover {
 .no-bottom {
   margin-bottom: 0;
   padding-bottom: 0;
+}
+.redactor-box {
+  margin-bottom: 0;
 }
 .redactor-toolbar {
   position: static;

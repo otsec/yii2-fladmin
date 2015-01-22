@@ -19,14 +19,13 @@ a:hover {
   }
 }
 
-.panel {
-  .panel-body + .panel-body {
-    padding-top: 0;
-  }
+.panel-body + .panel-body {
+  padding-top: 0;
+}
 
-  .panel-body > .form-group:last-child {
-    margin-bottom: 0;
-  }
+.panel-body > .form-group:last-child,
+.panel-body > .table:last-child {
+  margin-bottom: 0;
 }
 
 .grid-view {
@@ -94,6 +93,10 @@ a:hover {
 .no-bottom {
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.redactor-box {
+  margin-bottom: 0;
 }
 
 .redactor-toolbar {

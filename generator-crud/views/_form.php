@@ -40,7 +40,7 @@ use yii\helpers\Html;
     if (in_array($attribute, $safeAttributes)) {
         $field = $generator->generateActiveField($attribute);
         $field = str_replace('$model', $modelVariable, $field);
-        echo "                <?= " . $field . " ?>\n";
+        echo "        <?= " . $field . " ?>\n";
     }
 } ?>
     <?= "<?= " ?>FlAdmin::endPanel() ?>

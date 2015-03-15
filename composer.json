@@ -17,7 +17,7 @@
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
         "otsec/yii2-bootstrap-forms": "^0.1",
-        "rmrevin/yii2-fontawesome": "2.5.0"
+        "rmrevin/yii2-fontawesome": "^2.7"
     },
     "require-dev": {
         "yiisoft/yii2-gii": "*"
